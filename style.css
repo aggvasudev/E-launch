@@ -1,0 +1,201 @@
+
+/* basic styles for black background and crosshair cursor */
+body {
+	background: #000;
+	margin: 0;
+  /* cursor: url("scissors-free-vector.png"), auto; */
+}
+
+canvas {
+	cursor: crosshair;
+	display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .inauguration-container {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    /* position: absolute;
+    z-index: -1; */
+  }
+  
+  .content-wrapper {
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgb(255 255 255 / 1);
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  .logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  .portal-name {
+    font-size: 2.5em;
+    color: #333; /* Dark grey for better contrast */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.main-content {
+    margin-top: 30px;
+}
+
+.launched-by {
+    font-size: 1.2em;
+    color: #0077b6; /* A deeper blue for better visibility */
+    margin-bottom: 10px;
+}
+
+.chief-guest {
+    font-size: 2em;
+    color: #d62828; /* A vibrant red for emphasis */
+    margin-bottom: 5px;
+}
+
+.designation {
+    font-size: 1.2em;
+    color: #009688; /* A teal color for a modern look */
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.presence {
+    font-size: 1em;
+    color: #0077b6; /* Consistent with launched-by */
+    margin-bottom: 15px;
+}
+
+.guests {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.guest {
+    background-color: rgba(230, 230, 230, 0.5); /* Light grey with transparency */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.guest h5 {
+    font-size: 1.1em;
+    color: #e67e22; /* Warm orange for names */
+    margin-bottom: 5px;
+}
+
+.guest p {
+    font-size: 0.9em;
+    color: #333; /* Dark grey for better readability */
+    margin-bottom: 5px;
+}
+
+.guest span {
+    font-size: 0.8em;
+    color: #7f8c8d; /* A muted grey for less important text */
+    font-style: italic;
+}
+
+.date {
+    font-size: 1.1em;
+    color: #333; /* Dark grey for consistency */
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* curtains start  */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#openCurtain {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.curtain_main {
+  position: relative;
+  z-index: 1;
+}
+
+.curtain {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  transition: transform 5s linear;
+}
+
+.curtain-left {
+  transform: translate(0, 0);
+}
+
+.curtain-right {
+  transform: translate(0, 0);
+}
+
+.curtain-left.open {
+  transform: translate(-100%, 0);
+}
+
+.curtain-right.open {
+  transform: translate(100%, 0);
+}
+
+.curtain-element {
+  width: 5%;
+  height: 100%;
+  float: left;
+  border-bottom-right-radius: 67px;
+  border-bottom-left-radius: 67px;
+}
+
+.curtain-element:nth-child(odd) {
+  background-color: #ba0f0f;
+}
+
+.curtain-element:nth-child(even) {
+  background-color: #d72525;
+}
+
+.position-absolute {
+  position: absolute;
+  width: 100%;
+}
+
+#openCurtain {
+  transition: opacity 2s ease;
+  opacity: 1;
+  width: -webkit-fill-available;
+}
+#click_image img {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512" transform="rotate(180)"><path d="M256 192l-39.5-39.5c4.9-12.6 7.5-26.2 7.5-40.5C224 50.1 173.9 0 112 0S0 50.1 0 112s50.1 112 112 112c14.3 0 27.9-2.7 40.5-7.5L192 256l-39.5 39.5c-12.6-4.9-26.2-7.5-40.5-7.5C50.1 288 0 338.1 0 400s50.1 112 112 112s112-50.1 112-112c0-14.3-2.7-27.9-7.5-40.5L499.2 76.8c7.1-7.1 7.1-18.5 0-25.6c-28.3-28.3-74.1-28.3-102.4 0L256 192zm22.6 150.6L396.8 460.8c28.3 28.3 74.1 28.3 102.4 0c7.1-7.1 7.1-18.5 0-25.6L342.6 278.6l-64 64zM64 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm48 240a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" fill="yellow"/></svg>'), auto;
+}
+
+#click_image img.hidden {
+  opacity: 0;
+}
